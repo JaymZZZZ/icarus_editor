@@ -20,7 +20,7 @@ jobs:
     - run: flutter config --enable-windows-desktop
     - run: flutter build windows --release
       working-directory: ./src/icarus_editor
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: icarus_editor_windows${{ matrix.os.version }}
         path: ./src/icarus_editor/build/windows/x64/runner/Release/
